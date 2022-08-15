@@ -20,6 +20,7 @@ a{
     --Dark-Grayish-Blue: hsl(210, 10%, 33%);
     --Grayish-Blue: hsl(201, 11%, 66%);
     --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
 }
 
 p{
@@ -110,7 +111,7 @@ p{
     box-shadow: 2px 2px 5px var(--Light-Blue);
 }
 
-/* Header components@media query */
+/* Header@media query:375px */
 
 @media screen and (max-width:375px) {
     .bgMobile{
@@ -144,6 +145,42 @@ p{
 
 }
 
+/* Header@media query:425px */
+
+@media screen and (max-width:425px){
+    .bgMobile{
+        /* display: block; */
+        position: relative;
+        display: none;
+    }
+
+    .bgDesktop{
+        /* display: none; */
+        display: block;
+    }
+
+    #headCont{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #headCont h1{
+        font-size: 2rem;
+    }
+
+    .headBtn{
+        grid-template-columns: 1fr;
+        margin-top: 6rem;
+        margin-bottom: 30px;
+    }
+}
+
+
 /* #snippet components code */
 
 #snippet{
@@ -155,7 +192,6 @@ p{
     margin: auto;
     text-align: center;
     width: 60%;
-    align-content: center;
 }
 
 #snipGrid{
@@ -190,7 +226,7 @@ p{
 }
 
 
-/* Snippet@media query */
+/* Snippet@media query:375px */
 
 @media screen and (max-width:375px){
     .snipTxt{
@@ -216,4 +252,260 @@ p{
         text-align: center;
         padding: 20px;
     }
+}
+
+/* Snippet@media query:375px */
+
+@media screen and (max-width:425px) {
+    .snipTxt{
+        width: 100%;
+        padding: 15px;
+        margin-top: 20rem;
+    }
+
+    #snipGrid{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .grdImg{
+        margin: 0 10px;
+    }
+
+    .grdImg img{
+        width: 100%;
+    }
+
+    .grdTxt{
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+
+
+
+/* Gagdget components code */
+
+#gagTxt{
+    margin: auto;
+    margin-top: 10rem;
+    text-align: center;
+    width: 60%;
+}
+
+.gagImg{
+    margin: auto;
+    text-align: center;
+}
+
+/* Gadget@media query:375px */
+
+@media screen and (max-width:375px){
+    #gagTxt{
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .gagImg img{
+        width: 100%;
+
+    }
+}
+
+
+/* Gadget@media query:425px */
+
+@media screen and (max-width:425px){
+    #gagTxt{
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .gagImg img{
+        width: 100%;
+
+    }
+}
+
+
+
+/* Workflow components code */
+
+#workflow{
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.workTxt{
+    margin: auto;
+    text-align: center;
+}
+
+#workGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.grid1{
+    text-align: center;
+}
+
+.grid1 h3{
+    margin: 1rem 0;
+}
+
+/* Workflow@media query:375px */
+
+@media screen and (max-width:375px) {
+    .workTxt{
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    #workGrid{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .grid1 img{
+        margin-top: 25px;
+    }
+}
+
+
+/* Workflow@media query:425px */
+
+@media screen and (max-width:425px) {
+    .workTxt{
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+    #workGrid{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    .grid1 img{
+        margin-top: 25px;
+    }
+}
+
+
+/* Companies logo code */
+
+#onlyGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+    margin: auto;
+    margin-top: 5rem;
+    width: 90%;
+}
+
+
+/* Companies@media query:375px */
+
+@media screen and (max-width:375px){
+    #onlyGrid{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+
+/* Avalability components code */
+
+#available{
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+    width: 50%;
+}
+
+#available h1{
+    font-size: 1.5rem;
+}
+
+#available p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.availBtn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    width: 65%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.availBtn a:first-child, .availBtn a:nth-child(2){
+    background-color: var(--Strong-Cyan);
+    border-radius: 10rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+    box-shadow: 2px 2px 5px var(--Strong-Cyan);
+    cursor: pointer;
+}
+
+.availBtn a:nth-child(2){
+    background: var(--Light-Blue);
+    box-shadow: 2px 2px 5px var(--Light-Blue);
+}
+
+/* availabilty@media query:375px */
+
+@media screen and (max-width:375px) {
+    #available{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .availBtn{
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
+        margin-bottom: 30px;
+    }
+}
+
+/* availabilty@media query:425px */
+
+@media screen and (max-width:425px) {
+    #available{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .availBtn{
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* Footer components code */
+
+#footer{
+    width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+    /* background: var(--Grayish-Blue); */
+    color: var(--black);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
 }
