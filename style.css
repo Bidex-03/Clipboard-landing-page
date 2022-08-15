@@ -7,6 +7,10 @@
     font-family: 'Bai Jamjuree', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 /* Utility classes */
 
@@ -15,4 +19,118 @@
     --Light-Blue: hsl(233, 100%, 69%);
     --Dark-Grayish-Blue: hsl(210, 10%, 33%);
     --Grayish-Blue: hsl(201, 11%, 66%);
+    --white: hsl(0, 0%, 100%);
+}
+
+p{
+    font-size: 20px;
+    color: var(--Grayish-Blue);
+    margin-bottom: 20px; 
+}
+
+@media screen and (max-width: 768px){
+    p{
+        font-size: 18px;
+    }
+}
+
+/* Header components code */
+
+#header{
+    width: 100%;
+    
+}
+
+.bgDesktop{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+.bgMobile{
+    display: none;
+}
+
+#headCont{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50%;
+}
+
+#headCont .logo{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2.5rem;
+}
+
+#headCont h1{
+    font-size: 2.5rem;
+    color: var(--Dark-Grayish-Blue);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.headBtn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    width: 65%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 25px;
+
+}
+
+.headBtn a:first-child, .headBtn a:nth-child(2){
+    background-color: var(--Strong-Cyan);
+    border-radius: 10rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+    box-shadow: 2px 2px 5px var(--Strong-Cyan);
+    cursor: pointer;
+}
+
+.headBtn a:nth-child(2){
+    background: var(--Light-Blue);
+    box-shadow: 2px 2px 5px var(--Light-Blue);
+}
+
+/* Header components@media query */
+
+@media screen and (max-width:375px) {
+    .bgMobile{
+        display: block;
+        position: relative;
+    }
+
+    .bgDesktop{
+        display: none;
+    }
+
+    #headCont{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #headCont h1{
+        font-size: 2rem;
+    }
+
+    .headBtn{
+        grid-template-columns: 1fr;
+        margin-top: 6rem;
+        margin-bottom: 30px;
+    }
+
 }
